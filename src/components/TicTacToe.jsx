@@ -3,6 +3,19 @@ import { useState } from "react";
 const TicTacToe = () => {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [isXTurn, setIsXTurn] = useState(true);
+  const winningCombination = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+
   return (
     <>
       <div className="flex justify-center min-h-screen items-center bg-slate-950">
